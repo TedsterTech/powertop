@@ -82,6 +82,7 @@ static const struct option long_options[] =
 {
 	/* These options set a flag. */
 	{"auto-tune",	no_argument,		NULL,		 OPT_AUTO_TUNE},
+	{"autotune",	no_argument,		NULL,		 OPT_AUTO_TUNE},
 	{"calibrate",	no_argument,		NULL,		 'c'},
 	{"csv",		optional_argument,	NULL,		 'C'},
 	{"debug",	no_argument,		&debug_learning, OPT_DEBUG},
@@ -119,7 +120,7 @@ static bool set_refresh_timeout()
 static void print_usage()
 {
 	printf("%s\n\n", _("Usage: powertop [OPTIONS]"));
-	printf("     --auto-tune\t %s\n", _("sets all tunable options to their GOOD setting"));
+	printf("     --auto-tune (or autotune)\t %s\n", _("sets all tunable options to their GOOD setting"));
 	printf(" -c, --calibrate\t %s\n", _("runs powertop in calibration mode"));
 	printf(" -C, --csv%s\t %s\n", _("[=filename]"), _("generate a csv report"));
 	printf("     --debug\t\t %s\n", _("run in \"debug\" mode"));
